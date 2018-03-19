@@ -1,138 +1,76 @@
-p{ line-height: 1em; }
-h1, h2, h3, h4{
-    color: orange;
-	font-weight: normal;
-	line-height: 1.1em;
-	margin: 0 0 .5em 0;
+body {
+    background-color: gray;
 }
-h1{ font-size: 1.7em; }
-h2{ font-size: 1.5em; }
-a{
-	color: black;
-	text-decoration: none;
-}
-	a:hover,
-	a:active{ text-decoration: underline; }
-
-/ you can structure your code's white space so that it is as readable for when you come back in the future or for other people to read and edit quickly /
-
-body{
-    font-family: arial; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0;
-}
-/ you can put your code all in one line like above /
-#page{ margin: 20px; }
-
-/ or on different lines like below /
-#logo{
-	width: 35%;
-	margin-top: 5px;
-	font-family: georgia;
-	display: inline-block;
-}
-/ but try and be as concise as possible /
-#nav{
-	width: 60%;
-	display: inline-block;
-	text-align: right;
-	float: right;
-}
-	#nav ul{}
-		#nav ul li{
-			display: inline-block;
-			height: 62px;
-		}
-			#nav ul li a{
-				padding: 20px;
-				background: orange;
-				color: white;
-			}
-			#nav ul li a:hover{
-				background-color: #ffb424;
-				box-shadow: 0px 1px 1px #666;
-			}
-			#nav ul li a:active{ background-color: #ff8f00; }
-
-#content{
-	margin: 30px 0;
-	padding: 20px;
-	clear: both;
-}
-
-
-#content,
-ul li a{ box-shadow: 0px 1px 1px #999; }
-.product-item .product-info .product-price .price[data-v-a2b51030] {
-    font-size: 20px;
-}
-
-.product-item .product-image img[data-v-a2b51030] {
-    max-width: 100%;
-    max-height: 100%;
-}
-a, img {
-    border: 0;
-}
-
-@keyframes slidy {
-0% { left: 10%; }
-20% { left: 20%; }
-25% { left: -100%; }
-45% { left: -400%; }
-50% { left: -500%; }
-70% { left: -600%; }
-75% { left: -700%; }
-95% { left: -800%; }
-100% { left: -900%; }
-}
-
-body { 
-background-image: url("pexels-photo-396547.jpeg");
-	margin: 0; } 
-div#slider { overflow: hidden; }
-div#slider figure img { width: 10%; height: 400px; float: left; }
-div#slider figure { 
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 30s slidy infinite; 
-}
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 0px;
-    text-align: left;
-}
-
-footer {background: blue;color:yellow;}
-.nav {background:#eee;}
-
-.nav ul {
+ul {
     list-style-type: none;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+     overflow: hidden;
+    background-color: #333;
 }
-/*p{
-	color: orange;
-	font-size: 30px;
-	text-align: right;
-	text;
-}*/
 
+li {
+    float: left;
+}
 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 50px;
+    text-decoration: none;
+}
 
+a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+background-color:#4CAF50;
+}
+
+div.slide-slow {
+  width:100%;
+  overflow:hidden;
+  margin-bottom:100%
+}
+div.slide-slow div.inner {
+  animation: slide-slow 300s;
+  margin-bottom:100%;
+}
+
+@keyframes slide-slow {
+  from {
+    margin-right: 0%;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   background-color: blue;
+   color: white;
+   text-align: center;
+   color: green;
+   
+}
+.n{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.n1{
+  margin-right: 800px;
+}
+.item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
